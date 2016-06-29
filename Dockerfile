@@ -7,6 +7,6 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install curl -y && \
     mkdir -p /etc/traefik && \
-    curl -L $TRAEFIK -o /opt/traefik
+    curl -L $TRAEFIK -o /opt/traefik && chmod +x /opt/traefik
 
 ENTRYPOINT ["/entrypoint.sh"]
