@@ -2,6 +2,7 @@ FROM debian:latest
 
 ARG TRAEFIK=https://github.com/containous/traefik/releases/download/v1.0.0-rc3/traefik_linux-amd64
 
+COPY entrypoint.sh /
 
 RUN apt-get update && \
     apt-get upgrade -y && \
